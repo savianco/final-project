@@ -12,7 +12,7 @@ const productSchema = new mongoose.Schema({
     type: String,
     required: [true, 'The product category is required']
   },
-  image: {
+  img: {
     type: String, default: ''  ///  PDTE. DE CAMBIAR ////
   },
   description: {
@@ -20,12 +20,18 @@ const productSchema = new mongoose.Schema({
     required: [true, 'The product description is required']
   },
   price: {
-    type: Number,
+    type: String,
     required: [true, 'The product price is required']
   },
   stock: {
-    type: Number,
+    type: String,
     required: [true, 'The product stock is required']
+  },
+  logo1: {
+    type: String, default: ''  ///  PDTE. DE CAMBIAR ////
+  },
+  logo2: {
+    type: String, default: ''  ///  PDTE. DE CAMBIAR ////
   }//,
   // timestamps: {
   //   createdAt: "created_at",

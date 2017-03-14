@@ -1,0 +1,30 @@
+<h2>Resultado de su búsqueda: <small>{{ word }}</small></h2>
+<hr>
+<div class="row animated fadeIn fast" *ngIf="products.length == 0">
+  <div class="col-md-12">
+    <div class="alert alert-info" role="alert">
+        No existen resultados de: {{ word }}
+    </div>
+  </div>
+</div>
+
+<div class="card-columns">
+
+  <div class="card animated fadeIn fast" *ngFor="let product of products; let i = index">
+   <img class="card-img-top img-fluid" [src]="product.img" [alt]="product.nombre">
+   <div class="card-block">
+     <h4 class="card-title">{{ product.name }}</h4>
+     <p class="card-text">{{ product.description }}</p>
+     <p class="card-text"><small class="text-muted">{{ product.price }}</small></p>
+
+        <button (click)="seeProduct(i)"
+          type="button" class="btn btn-outline-primary btn-block">
+          Ver más...
+       </button>
+
+    <!--   <a [routerLink] ="['/product',i]" class="btn btn-outline-primary">Ver más link...</a> -->
+   </div>
+ </div>
+
+
+</div>

@@ -1,16 +1,17 @@
 const _ = require('lodash');
 mongoose = require('mongoose');
 productModel = require('./product.model');
-//listModel = require('../list/list.model');
 
 exports.createProduct = function(req, res, next) {
 	const newProduct = new productModel({
 		name: req.body.name,
     category: req.body.category,
-    image: req.body.image || '',
+    img: req.body.img || '',
     description: req.body.description,
     price: req.body.price,
-    stock: req.body.stock,
+		stock: req.body.stock,
+		logo1: req.body.logo1 || '',
+		logo2: req.body.logo2 || '',
   })
 
 	newProduct.save(function(err, product) {
@@ -31,6 +32,25 @@ exports.createProduct = function(req, res, next) {
 // 		);
 // 	});
 // };
+
+
+exports.detailProduct = function(req, res, next){
+	productModel.findById(req.params.id, (err, result)=>{
+		if(err){
+			return res.status(500).json({message: "Cannot find product with id " + req.params.id});
+		}
+		return res.status(200).json(result);
+	});
+}
+
+exports.listProducts = function(req, res, next){
+	productModel.find({},(err, result)=>{
+		if(err){
+			return res.status(500).json({message: "Cannot list products"});
+		}
+		return res.status(200).json(result);
+	});
+}
 
 exports.editProduct = function(req, res ,next) {
 	const productId = req.params.id;
