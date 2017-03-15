@@ -4,23 +4,22 @@
 <div class="row animated fadeIn fast">
   <div class="col-md-4">
 
-      <img [src]="product.img" class="img-fluid" [alt]="product.name">
-      <br> <br>
+    <img [src]="product.img" class="img-fluid" [alt]="product.name">
+    <br> <br>
 
     <a [routerLink]="['/products']" class="btn btn-outline-danger btn-block">Regresar</a>
 
   </div>
 
   <div class="col-md-8">
-      <h3>{{ product.name }}</h3>
-      <hr>
-      <p>
-        {{ product.description }}
-      </p>
-      <div>
-        <img class="img-logo1" src="/assets/img/grandespensa-logo.png" alt="logo Gran Despensa">
-        <img *ngIf="product.category === 'QUESOS'" class="img-logo2" src="/assets/img/D-O-Cebreiro-logo.png" alt="logo D.O.Cebreiro">
-      </div>
-
-
+    <h3>{{ product.name }}</h3>
+    <hr>
+    <p>
+      {{ product.description }}
+    </p>
+    <div>
+      <img class="img-logo1" src="/assets/img/grandespensa-logo.png" alt="logo Gran Despensa">
+      <img *ngIf="product.category === 'QUESOS'" class="img-logo2" src="/assets/img/D-O-Cebreiro-logo.png" alt="logo D.O.Cebreiro">
+    </div>
+    <button (click)="addToCart(product._id)" type="button" class="btn btn-warning btn-block">AÑADIR A LA CESTA</button>
   </div>

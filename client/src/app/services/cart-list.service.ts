@@ -1,12 +1,18 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 
 @Injectable()
 export class CartListService {
-    count: number = 0;
+    productos: any = [];
+    productAddEvent: EventEmitter<any> = new EventEmitter<any>();
+
     constructor() { }
 
-    increment() {
-        this.count++;
-        console.log(`Count is now ${this.count}`);
+    addProduct(id){
+      this.productos.push(id);
+      this.productAddEvent.emit(this.productos);
+    }
+
+    getCart(){
+      return this.productAddEvent;
     }
 }

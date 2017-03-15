@@ -8,13 +8,11 @@ import { CartListService } from '../../services/cart-list.service';
 })
 export class CartListComponent implements OnInit {
 
-  constructor(public counter: CartListService) {}
+  numProductos = 0;
+  constructor(public cart: CartListService) {}
 
-  ngOnInit() {}
-
-
-  incrementCounter() {
-    this.counter.increment();
+  ngOnInit() {
+    this.cart.getCart().subscribe((productos) => this.numProductos = productos.length);
   }
 
 }

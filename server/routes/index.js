@@ -2,6 +2,7 @@ var path = require('path');
 
 module.exports = function(app) {
   app.use('/api/product', require('../api/product'));
+  app.use('/auth', require('./auth-controller'));
 
 	// // catch 404 and forward to Angular
   // app.all('/*', function (req, res) {

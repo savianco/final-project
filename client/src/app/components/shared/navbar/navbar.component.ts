@@ -11,7 +11,7 @@ export class NavbarComponent implements OnInit {
   constructor( private router:Router ) { }
 
   ngOnInit() {
-}
+  }
 
   searchProduct( word:string ){
 //    console.log(word);
@@ -22,5 +22,8 @@ export class NavbarComponent implements OnInit {
       this.router.navigate( ['/login'] )
     }
 
+    signup(){
+      this.router.navigate( ['/signup'] )
+    }
 
 }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductsService } from '../../services/products.service';
+import { CartListService } from '../../services/cart-list.service';
 
 @Component({
   selector: 'app-product',
@@ -11,7 +12,8 @@ export class ProductComponent {
   product:any = {};
 
   constructor( private activatedRoute:ActivatedRoute,
-               private _productsService:ProductsService
+               private _productsService:ProductsService,
+               private cartListService:CartListService
    ){
     this.activatedRoute.params.subscribe( (params:any) =>{
       console.log("WE Have paraMS!!");
@@ -20,7 +22,10 @@ export class ProductComponent {
         this.product = product;
       });
     });
+  }
 
+  addToCart(productID){
+    this.cartListService.addProduct(productID);
   }
 
 }

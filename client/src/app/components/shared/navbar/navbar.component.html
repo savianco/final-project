@@ -25,7 +25,7 @@
 
 
     <form class="form-inline my-2 my-lg-0">
-      <img src="/assets/img/shopping-cart.png" class="logo-cart"/><h4 id="productsInTheCart">4</h4>
+      <h4 id="productsInTheCart"><app-cart-list></app-cart-list></h4>
       <input class="form-control mr-sm-2" type="text" placeholder="Busca un producto" (keyup.enter)="searchProduct(searchText.value)" #searchText>
       <button (click)="searchProduct(searchText.value)"
        class="btn btn-outline-primary my-2 my-sm-0 search-button" type="botton">Buscar</button>

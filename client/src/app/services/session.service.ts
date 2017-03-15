@@ -5,7 +5,7 @@ import 'rxjs/add/operator/catch';
 import { Observable } from 'rxjs/Rx';
 
 
-const BASEURL = "http://localhost:3000";
+const BASEURL: string = "http://localhost:3000";
 
 @Injectable()
 export class SessionService {
@@ -21,13 +21,13 @@ export class SessionService {
   }
 
   signup(user) {
-    return this.http.post(`${BASEURL}/signup`, user, this.options)
+    return this.http.post(`${BASEURL}/auth/signup`, user, this.options)
       .map(res => res.json())
       .catch(this.handleError);
   }
 
   login(user) {
-    return this.http.post(`${BASEURL}/login`, user, this.options)
+    return this.http.post(`${BASEURL}/auth/login`, user, this.options)
       .map(res => res.json())
       .map(user =>{this.emitter.emit(user);return user})
       .catch(this.handleError);
@@ -38,20 +38,20 @@ export class SessionService {
   }
 
   logout() {
-    return this.http.post(`${BASEURL}/logout`,{}, this.options)
+    return this.http.post(`${BASEURL}/auth/logout`,{}, this.options)
       .map(res => res.json())
       .map(user =>{this.emitter.emit(null);return user})
       .catch(this.handleError);
   }
 
   isLoggedIn() {
-    return this.http.get(`${BASEURL}/loggedin`, this.options)
+    return this.http.get(`${BASEURL}/auth/loggedin`, this.options)
       .map(res => res.json())
       .catch((err) => this.handleError(err));
   }
 
   getPrivateData() {
-    return this.http.get(`${BASEURL}/private`, this.options)
+    return this.http.get(`${BASEURL}/auth/private`, this.options)
       .map(res => res.json())
       .catch(this.handleError);
   }
