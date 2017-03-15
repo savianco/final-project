@@ -10,6 +10,7 @@ import { APP_ROUTING } from './app.routes';
 // SERVICIOS
 import { SessionService } from './services/session.service';
 import { ProductsService } from './services/products.service';
+import { CartListService } from './services/cart-list.service';
 
 
 // COMPONENTES
@@ -21,8 +22,9 @@ import { AboutComponent } from './components/about/about.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ProductComponent } from './components/product/product.component';
 import { SearchComponent } from './components/search/search.component';
-import { CreateProductComponent } from './create-product/create-product.component';
+import { CreateProductComponent } from './components/create-product/create-product.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
+import { CartListComponent } from './components/cart-list/cart-list.component';
 
 
 @NgModule({
@@ -37,6 +39,7 @@ import { FooterComponent } from './components/shared/footer/footer.component';
     SignupComponent,
     CreateProductComponent,
     FooterComponent,
+    CartListComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,8 @@ import { FooterComponent } from './components/shared/footer/footer.component';
   ],
   providers: [
     SessionService,
-    ProductsService
+    ProductsService,
+    CartListService
   ],
   bootstrap: [AppComponent]
 })

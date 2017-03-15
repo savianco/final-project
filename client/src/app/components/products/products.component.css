@@ -4,9 +4,7 @@ body {
   padding: 0px 0px 0px 0px;
 }
 
-.carousel {
-  margin-top: 40px;
-}
+
 
 h1 {
   background-color: rgba(256,256,256,.03);
@@ -27,6 +25,7 @@ span {
   color: #000;
   font-family: 'Germania One', cursive;
   font-size: 3em;
+  20px -40px 50px #ec760c,
   vertical-align: middle;
   letter-spacing: .2em;
 }
@@ -50,7 +49,6 @@ span {
 0% {text-shadow: 0 0 20px #fefcc9,
   10px -10px 30px #feec85,
   -20px -20px 40px #ffae34,
-  20px -40px 50px #ec760c,
   -20px -60px 60px #cd4606,
   0 -80px 70px #973716,
   10px -90px 80px #451b0e;}

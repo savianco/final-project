@@ -31,7 +31,7 @@ export class ProductsService {
   }
 
   edit(product) {
-    return this.http.put(`${this.BASE_URL}/products/${product.id}`, product, this.options)
+    return this.http.put(`${this.BASE_URL}/product/${product.id}`, product, this.options)
       .map((res) => res.json())
       .catch(this.handleError);
   }

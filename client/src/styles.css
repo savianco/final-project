@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 body{
+  background-color: black;
+  font-family: 'Germania One', cursive;
   padding-bottom: 50px;
 }
 
@@ -16,8 +18,17 @@ body{
   width: 300px;
 }
 
-.burcar-botton{
-  padding-left: 50px;
+
+.search-button{
+}
+
+.login-button{
+  margin-left: 10px;
+  background-color: green;
+}
+.signup-button{
+  margin-left: 10px;
+  background-color: darkred;
 }
 
 

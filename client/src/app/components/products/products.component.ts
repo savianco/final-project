@@ -6,13 +6,14 @@ import { Router } from '@angular/router';
 @Component({
     selector: 'app-products',
     templateUrl: './products.component.html',
+    styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
 
     products: Object[] = [];
 
     constructor(private productsService: ProductsService,
-        private router: Router
+                private router: Router
     ) {
         //  console.log("constructor");
     }

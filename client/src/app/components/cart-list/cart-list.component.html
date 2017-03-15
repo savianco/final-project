@@ -1,0 +1,109 @@
+<h1 class="animated fadeIn">{{ product.name | uppercase }} <small>({{ product.price | currency:'EUR' }})</small></h1>
+<hr>
+
+<div class="row animated fadeIn fast">
+  <div class="col-md-4">
+
+      <img [src]="product.img" class="img-fluid" [alt]="product.name">
+      <br> <br>
+
+    <a [routerLink]="['/products']" class="btn btn-outline-danger btn-block">Regresar</a>
+
+  </div>
+
+  <div class="col-md-8">
+      <h3>{{ product.name }}</h3>
+      <hr>
+      <p>
+        {{ product.description }}
+      </p>
+      <div>
+        <img class="img-logo1" src="/assets/img/grandespensa-logo.png" alt="logo Gran Despensa">
+        <img *ngIf="product.category === 'QUESOS'" class="img-logo2" src="/assets/img/D-O-Cebreiro-logo.png" alt="logo D.O.Cebreiro">
+      </div>
+
+      <div>
+        
+        <button (click)="incrementCounter()"
+           type="button" class="btn btn-warning btn-block"><i class="fa fa-shopping-cart" aria-hidden="true"></i>AÑADIR A LA CESTA</button>
+
+      </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<div class="header">
+    <img src="images/ironhacklogo.png" class="logo"/>
+    <h1>Gran Despensa</h1>
+    <h2 id="total-price">Total: 0,00 €</h2>
+    <img src="images/shopping-cart.png" class="cart"/>
+    <h4 id="productsInTheCart">4</h4>
+  </div>
+  <div class="container">
+    <div class="spacer">
+
+    </div>
+    <div class="products">
+      <div class="row product-row">
+        <span id="product-name" class="col-xs-3">Product 1</span>
+        <span class="price col-xs-5">15,00 €</span>
+        <label></label><input type="text" value="0" class="quantity col-xs-7"/>
+        <span class="sub-total col-xs-2">0,00 €</span>
+        <button class="btn-delete col-xs-7"><img src=images/garbage.png class="bin-img"/></button>
+      </div>
+      <div class="row product-row">
+        <span id="product-name" class="col-xs-3">Producto 2</span>
+        <span class="price col-xs-5">10,00 €</span>
+        <label>Cantidad</label><input type="text" value="0" class="quantity col-xs-7"/>
+        <span class="sub-total col-xs-2">0,00 €</span>
+        <button class="btn-delete col-xs-7"><img src=images/garbage.png class="bin-img"/></button>
+      </div>
+      <div class="row product-row">
+        <span id="product-name" class="col-xs-3">Producto 3</span>
+        <span class="price col-xs-5">6,00 €</span>
+        <label>Cantidad</label><input type="text" value="0" class="quantity col-xs-7"/>
+        <span class="sub-total col-xs-2">0,00 €</span>
+        <button class="btn-delete col-xs-7"><img src=images/garbage.png class="bin-img"/></button>
+      </div>
+      <div class="row product-row">
+        <span id="product-name" class="col-xs-3">Producto 4</span>
+        <span class="price col-xs-5">5,00 €</span>
+        <label>Cantidad</label><input type="text" value="0" class="quantity col-xs-7"/>
+        <span class="sub-total col-xs-2">0,00 €</span>
+        <button class="btn-delete col-xs-7"><img src=images/garbage.png class="bin-img"/></button>
+      </div>
+      <div class="row product-row">
+        <span id="product-name" class="col-xs-3">Producto 5</span>
+        <span class="price col-xs-5">15,00 €</span>
+        <label>Cantidad</label><input type="text" value="0" class="quantity col-xs-7"/>
+        <span class="sub-total col-xs-2">0,00 €</span>
+        <button class="btn-delete col-xs-7"><img src=images/garbage.png class="bin-img"/></button>
+      </div>
+    </div>
+    <div class="add-new">
+      <input type="text" value="Product name..." id="newName"/>
+      <input type="text" value="0" id="newPrice"/>
+      <img src="images/plus.png" class="btn" id="new-item-create"/>
+    </div>
+
+    <button class="btn-success" id="calc-prices-button">Calcular Precio</button>
+
+    <h2 id="total-price2">Total a pagar: 0,00 €</h2>
+  </div> -->

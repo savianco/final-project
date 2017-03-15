@@ -4,6 +4,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ProductComponent } from './components/product/product.component';
 import { SearchComponent } from './components/search/search.component';
+import { CartListComponent } from './components/cart-list/cart-list.component';
 
 
 
