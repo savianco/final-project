@@ -27,6 +27,7 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import { CartListComponent } from './components/cart-list/cart-list.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { CartpageComponent } from './components/cartpage/cartpage.component';
+// import { FileUploadModule } from 'ng2-file-upload@1.2.0';
 
 
 @NgModule({
@@ -50,7 +51,7 @@ import { CartpageComponent } from './components/cartpage/cartpage.component';
     FormsModule,
     HttpModule,
     APP_ROUTING,
-    // RouterModule.forRoot(Routes)
+    // FileUploadModule
   ],
   providers: [
     SessionService,

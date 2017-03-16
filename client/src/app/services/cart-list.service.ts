@@ -3,9 +3,9 @@ import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Observable } from 'rxjs/Rx';
+import { environment } from '../../environments/environment';
 
-
-const BASEURL: string = "http://localhost:3000";
+const BASEURL = environment.apiUrl;
 
 
 @Injectable()
@@ -27,7 +27,7 @@ export class CartListService {
 
     getProductsForCart(){
       console.log("calling get products for cart.");
-      
+
       return this.http.post(`${BASEURL}/api/product/cart`, this.productos)
         .map(res => {
           console.log("got response from server");

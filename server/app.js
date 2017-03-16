@@ -91,9 +91,9 @@ app.use(function(req, res, next) {
 //  we know we’re going to use a client application, we want
 // to configure the client public index.html as a fallback page:
 
-/*app.all('/*', function (req, res) {
+app.all('/*', function (req, res) {
   res.sendfile(__dirname + '/public/index.html');
-});*/
+});
 
 
 // error handler

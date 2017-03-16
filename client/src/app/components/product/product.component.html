@@ -18,8 +18,12 @@
       {{ product.description }}
     </p>
     <div>
-      <img class="img-logo1" src="/assets/img/grandespensa-logo.png" alt="logo Gran Despensa">
-      <img *ngIf="product.category === 'QUESOS'" class="img-logo2" src="/assets/img/D-O-Cebreiro-logo.png" alt="logo D.O.Cebreiro">
+      <img class="img-logo-gd" src="http://www.grandespensa.com/assets/images/logo.png" alt="logo Gran Despensa">
+      <img *ngIf="product.category === 'QUESOS'" class="img-logo-quesos" src="http://www.cebreiro.es/img/logo.png" alt="logo D.O.Cebreiro">
+      <img *ngIf="product.category === 'LICORES'" class="img-logo-licores" src="http://www.grandespensa.com/assets/images/monje2.png" alt="logo D.O.Cebreiro">
+      <img *ngIf="product.category === 'DULCES'" class="img-logo-dulces" src="http://www.grandespensa.com/assets/images/monje1.png" alt="logo D.O.Cebreiro">
     </div>
-    <button (click)="addToCart(product._id)" type="button" class="btn btn-danger btn-block btn-añadir-cesta">AÑADIR A LA CESTA</button>
+  <span>  <button (click)="addToCart(product._id)" type="button" class="btn btn-danger btn-inline btn-añadir-cesta">AÑADIR A LA CESTA</button>
+    <a [routerLink]="['/products']" class="btn btn-danger btn-inline btn-añadir-cesta">SEGUIR COMPRANDO</a>
+</span>
   </div>

@@ -4,11 +4,13 @@ import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Observable } from 'rxjs/Rx';
+import { environment } from '../../environments/environment';
+
 
 @Injectable()
 export class ProductsService {
 
-  BASE_URL: string = 'http://localhost:3000';
+  BASE_URL = environment.apiUrl;
 
   options: Object = {withCredentials:true};
 
