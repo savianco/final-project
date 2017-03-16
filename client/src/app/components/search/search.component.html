@@ -17,10 +17,11 @@
      <p class="card-text">{{ product.description }}</p>
      <p class="card-text"><small class="text-muted">{{ product.price }}</small></p>
 
-        <button (click)="seeProduct(i)"
+        <!-- <button (click)="seeProduct(i)"
           type="button" class="btn btn-outline-primary btn-block">
           Ver más...
-       </button>
+       </button> -->
+       <a [routerLink]="['/products']" class="btn btn-outline-danger btn-block">VOLVER</a>
 
     <!--   <a [routerLink] ="['/product',i]" class="btn btn-outline-primary">Ver más link...</a> -->
    </div>

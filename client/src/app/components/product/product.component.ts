@@ -6,6 +6,8 @@ import { CartListService } from '../../services/cart-list.service';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
+  styleUrls: ['./product.component.css']
+
 })
 export class ProductComponent {
 
@@ -16,7 +18,6 @@ export class ProductComponent {
                private cartListService:CartListService
    ){
     this.activatedRoute.params.subscribe( (params:any) =>{
-      console.log("WE Have paraMS!!");
       console.log(params);
       this._productsService.getProduct(params.id).subscribe((product) => {
         this.product = product;

@@ -77,3 +77,17 @@ exports.removeProduct = function (req, res) {
             res.json({ message: 'product removed successfully' });
         });
 };
+
+exports.cartProducts = function (req, res, next){
+		let productIds = req.body;
+		console.log(productIds);
+		productModel.find({_id: {$in: productIds}}, (err, products)=>{
+			if (err){
+				 console.log(err);
+				 return next(err);
+			}
+			console.log("received from db ", products);
+			res.json(products);
+
+		});
+};

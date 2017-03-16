@@ -1,4 +1,4 @@
-<h1 class="animated fadeIn">{{ product.name | uppercase }} <small>({{ product.price | currency:'EUR' }})</small></h1>
+<h1 class="animated fadeIn">{{ product.name | uppercase }} <small class="pvp"> {{ product.price }} €</small></h1>
 <hr>
 
 <div class="row animated fadeIn fast">
@@ -7,7 +7,7 @@
     <img [src]="product.img" class="img-fluid" [alt]="product.name">
     <br> <br>
 
-    <a [routerLink]="['/products']" class="btn btn-outline-danger btn-block">Regresar</a>
+    <a [routerLink]="['/products']" class="btn btn-outline-danger btn-block">VOLVER</a>
 
   </div>
 
@@ -21,5 +21,5 @@
       <img class="img-logo1" src="/assets/img/grandespensa-logo.png" alt="logo Gran Despensa">
       <img *ngIf="product.category === 'QUESOS'" class="img-logo2" src="/assets/img/D-O-Cebreiro-logo.png" alt="logo D.O.Cebreiro">
     </div>
-    <button (click)="addToCart(product._id)" type="button" class="btn btn-warning btn-block">AÑADIR A LA CESTA</button>
+    <button (click)="addToCart(product._id)" type="button" class="btn btn-danger btn-block btn-añadir-cesta">AÑADIR A LA CESTA</button>
   </div>

@@ -18,13 +18,13 @@ authController.post("/signup", (req, res, next) => {
   var password = req.body.password;
 
   if (!username || !password) {
-    res.status(400).json({ message: "Provide username and password" });
+    res.status(400).json({ message: "Introduce usuario y contraseña" });
     return;
   }
 
   User.findOne({ username }, "username", (err, user) => {
     if (user !== null) {
-      res.status(400).json({ message: "The username already exists" });
+      res.status(400).json({ message: "Ese usuario ya existe" });
       return;
     }
 
@@ -38,12 +38,12 @@ authController.post("/signup", (req, res, next) => {
 
     newUser.save((err) => {
       if (err) {
-        res.status(400).json({ message: "Something went wrong" });
+        res.status(400).json({ message: "Algo ha salido mal" });
       } else {
         req.login(newUser, function(err) {
           if (err) {
             return res.status(500).json({
-              message: 'something went wrong :('
+              message: 'Algo ha salido mal :('
             });
           }
           res.status(200).json(req.user);
@@ -65,7 +65,7 @@ authController.post("/login", function(req, res, next) {
     req.login(user, function(err) {
       if (err) {
         return res.status(500).json({
-          message: 'something went wrong :('
+          message: 'Algo ha salido mal :('
         });
       }
       res.status(200).json(req.user);
@@ -77,7 +77,7 @@ authController.post("/login", function(req, res, next) {
 // The Logout route just logout the user and return a success message:
 authController.post("/logout", function(req, res) {
   req.logout();
-  res.status(200).json({ message: 'Success' });
+  res.status(200).json({ message: 'Hecho' });
 });
 
 // The Loggedin route is from the client...
@@ -86,16 +86,16 @@ authController.get("/loggedin", function(req, res) {
     return res.status(200).json(req.user);
   }
 
-  return res.status(403).json({ message: 'Unauthorized' });
+  return res.status(403).json({ message: 'No autorizado' });
 });
 
 // The Private route looks a lot like the loggedin routes...
 authController.get("/private", (req, res) => {
   if(req.isAuthenticated()) {
-    return res.json({ message: 'This is a private message' });
+    return res.json({ message: 'Este es un mensaje privado' });
   }
 
-  return res.status(403).json({ message: 'Unauthorized' });
+  return res.status(403).json({ message: 'No autorizado' });
 });
 
 module.exports = authController;

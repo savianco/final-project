@@ -25,6 +25,8 @@ import { SearchComponent } from './components/search/search.component';
 import { CreateProductComponent } from './components/create-product/create-product.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { CartListComponent } from './components/cart-list/cart-list.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { CartpageComponent } from './components/cartpage/cartpage.component';
 
 
 @NgModule({
@@ -40,6 +42,8 @@ import { CartListComponent } from './components/cart-list/cart-list.component';
     CreateProductComponent,
     FooterComponent,
     CartListComponent,
+    ContactComponent,
+    CartpageComponent,
   ],
   imports: [
     BrowserModule,

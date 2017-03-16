@@ -19,7 +19,7 @@ export class NavbarComponent implements OnInit {
   }
 
     login(){
-      this.router.navigate( ['/login'] )
+      this.router.navigate( ['/signup'] )
     }
 
     signup(){

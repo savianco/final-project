@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SessionService } from '../../services/session.service';
 
 @Component({
@@ -15,7 +16,7 @@ export class SignupComponent implements OnInit {
   error: string;
   privateData: any = '';
 
-  constructor(private session: SessionService) { }
+  constructor(private session: SessionService, private router: Router) { }
 
   ngOnInit() {
     this.session.getLoginEventEmitter().subscribe((user) =>this.user=user);
@@ -65,5 +66,6 @@ export class SignupComponent implements OnInit {
   successCb(user) {
     this.user = user;
     this.error = null;
+    this.router.navigate(['/home']);
   }
 }

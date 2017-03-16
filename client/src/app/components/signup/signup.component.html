@@ -1,15 +1,31 @@
-<h1> Authentication Sample </h1>
-<form *ngIf="!user">
-  <h2> Login or Signup </h2>
-  <label> Username </label>
-  <input type="text" [(ngModel)]="formInfo.username" name="username"/>
-  <br>
-  <label> Password </label>
-  <input type="password" [(ngModel)]="formInfo.password" name="password"/>
-
-  <button (click)="login()"> login </button>
-  <button (click)="signup()"> signup </button>
-</form>
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-4 col-xs-8 col-xs-offset-2 signup right">
+    <h1 class="intro-message">Por favor, identifíquese o regístrese</h1>
+        <form *ngIf="!user">
+      <div class="form-group">
+      	<label for="username" class="cols-sm-2 control-label">Usuario</label>
+      		<div class="cols-sm-10">
+      			<div class="input-group">
+  						<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+  						<input type="text" [(ngModel)]="formInfo.username" class="form-control" name="username" id="name"  placeholder="Introduzca usuario"/>
+						</div>
+			  	</div>
+        </div>
+        <div class="form-group">
+    <label for="password" class="cols-sm-2 control-label">Contraseña</label>
+      <div class="cols-sm-10">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+          <input type="password" [(ngModel)]="formInfo.password" class="form-control" name="password" id="password"  placeholder="Introduzca contraseña"/>
+        </div>
+      </div>
+    </div>
+    <div class="text-center">
+      <button (click)="login()" class="btn btn-default text-center btn-log-sig"> Login </button>
+      <button (click)="signup()" class="btn btn-default text-center btn-log-sig"> Signup </button>
+      </div>
+    </form>
+</div>
 
 <div *ngIf="user">
   <h2> You are now logged in as {{ user.username }}!! </h2>
@@ -18,7 +34,7 @@
 
   <p *ngIf="privateData"> Here's some data fetched from a protected API </p>
   <pre> {{ privateData | json }} </pre>
-  <button (click)="logout()"> logout </button>
+  <button (click)="logout()"> Logout </button>
   <button (click)="getPrivateData()"> Get private data </button>
 </div>
 

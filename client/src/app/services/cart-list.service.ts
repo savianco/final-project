@@ -1,16 +1,44 @@
 import { Injectable, EventEmitter } from '@angular/core';
+import { Http, Response } from '@angular/http';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
+import { Observable } from 'rxjs/Rx';
+
+
+const BASEURL: string = "http://localhost:3000";
+
 
 @Injectable()
 export class CartListService {
     productos: any = [];
     productAddEvent: EventEmitter<any> = new EventEmitter<any>();
 
-    constructor() { }
+    constructor(private http: Http) { }
+
+    handleError(e) {
+    return Observable.throw(e.json().message);
+    }
+
 
     addProduct(id){
       this.productos.push(id);
       this.productAddEvent.emit(this.productos);
     }
+
+    getProductsForCart(){
+      console.log("calling get products for cart.");
+      
+      return this.http.post(`${BASEURL}/api/product/cart`, this.productos)
+        .map(res => {
+          console.log("got response from server");
+          return res.json();
+        })
+        // .map(product =>{this.emitter.emit(product);return product})
+        .catch(this.handleError);
+    }
+
+
+
 
     getCart(){
       return this.productAddEvent;
