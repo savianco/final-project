@@ -1,6 +1,22 @@
 .paymentWrap {
 	padding: 50px;
 }
+#carrito{
+	font-family: 'Germania One', cursive;
+}
+.icon-product{
+	margin-right: 10px;
+}
+.btn-default{
+	font-family: 'Germania One', cursive;
+}
+h5{
+	padding-top: 10px;
+}
+h4{
+	padding-top: 6px;
+}
+
 
 .paymentWrap .paymentBtnGroup {
 	max-width: 800px;

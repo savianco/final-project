@@ -25,9 +25,9 @@
 
 
     <form class="form-inline my-2 my-lg-0 buttons">
-      <img src="./assets/img/shopping-cart.png" class="img-cart">
-      <h4 class="productsInTheCart" [routerLink]="['cartpage']"><app-cart-list></app-cart-list></h4>
-      <input class="form-control mr-sm-2 busca-prod" type="text" placeholder="Busca un producto" (keyup.enter)="searchProduct(searchText.value)" #searchText>
+      <img [routerLink]="['cartpage']" src="http://www.jaimemesa.com/wp-content/uploads/2015/03/carrito.png" class="img-cart" type="button">
+      <h4 class="productsInTheCart" [routerLink]="['cartpage']"><app-cart-list class="num-buys"><br></app-cart-list></h4>
+      <input class="form-control mr-sm-2 busca-prod" type="text" placeholder="Buscar un producto" (keyup.enter)="searchProduct(searchText.value)" #searchText>
       <button (click)="searchProduct(searchText.value)"
        class="btn btn-outline-primary my-2 my-sm-0 search-button" type="botton">Buscar</button>
          <button (click)="login()"

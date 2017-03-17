@@ -1,7 +1,17 @@
 .btn-añadir-cesta{
   font-family: 'Germania One', cursive;
   font-size: 25px;
-  margin-top: 15px;
+  margin-top: 23px;
+}
+
+.btn-seguir-comprando{
+  font-size: 25px;
+  margin-top: 23px;
+  margin-left: 25px;
+}
+
+.btn-block{
+  font-size: 25px;
 }
 
 .pvp{

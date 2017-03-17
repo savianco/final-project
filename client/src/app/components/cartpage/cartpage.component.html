@@ -23,62 +23,44 @@
                             <div class="media-body" *ngFor="let product of products;">
                               <a class="thumbnail pull-left" href="#"> <img class="media-object"  src="{{ product.img }}"  style="width: 72px; height: 72px;"> </a>
 
-                                <h4 class="media-heading"><a [routerLink]="['/product']">  {{ product.name }}</a></h4>
-                                <h5 class="media-heading"><a [routerLink]="['/product']">  Ver detalle...</a></h5>
+                                <h5 class="media-heading icon-product"><a [routerLink]="['/product']">{{  product.name }}  </a></h5>
+                                <h6 class="media-heading icon-product"><a [routerLink]="['/product']">  Ver detalle...</a></h6>
                                 <span>Tiempo de entrega: </span><span class="text-success"><strong> 24 horas </strong></span>
                             </div>
                         </div></td>
                         <td class="col-sm-1 col-md-1" style="text-align: center">
-                        <input type="email" class="form-control" id="exampleInputEmail1" value="3">
+                        <input type="email" class="form-control" id="exampleInputEmail1" value="1">
                         </td>
-                        <td class="col-sm-1 col-md-1 text-center"><strong>4.87 €</strong></td>
-                        <td class="col-sm-1 col-md-1 text-center"><strong>14.61 €</strong></td>
+                        <td class="col-sm-1 col-md-1 text-center"><h5>8.00€</h5></td>
+                        <td class="col-sm-1 col-md-1 text-center"><h4>8.00€</h4></td>
                         <td class="col-sm-1 col-md-1">
                         <button type="button" class="btn btn-danger">
                             <span class="glyphicon glyphicon-remove"></span> Borrar
                         </button></td>
                     </tr>
-                    <tr>
-                        <td class="col-md-6">
-                        <div class="media display-6">
-                            <a class="thumbnail pull-left" href="#"> <img class="media-object" src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png" style="width: 72px; height: 72px;"> </a>
-                            <div class="media-body">
-                                <h4 class="media-heading"><a href="#">Product name</a></h4>
-                                <h5 class="media-heading"><a href="#">Ver detalle...</a></h5>
-                                <span>Tiempo de entrega: </span><span class="text-success"><strong> 24 horas</strong></span>
-                            </div>
-                        </div></td>
-                        <td class="col-md-1" style="text-align: center">
-                        <input type="email" class="form-control" id="exampleInputEmail1" value="2">
-                        </td>
-                        <td class="col-md-1 text-center"><strong>4.99 €</strong></td>
-                        <td class="col-md-1 text-center"><strong>9.98 €</strong></td>
-                        <td class="col-md-1">
-                        <button type="button" class="btn btn-danger">
-                            <span class="glyphicon glyphicon-remove"></span> Borrar
-                        </button></td>
-                    </tr>
+
                 </tbody>
                 <tfoot>
                     <tr>
                         <td>   </td>
                         <td>   </td>
                         <td>   </td>
-                        <td><h5>Subtotal<br>Gastos de envío</h5><h3>Total</h3></td>
-                        <td class="text-right"><h5><strong>24.59 €<br>6.94 €</strong></h5><h3>31.53 €</h3></td>
+                        <td><h5>Subtotal<br>Gastos de envío</h5><h6>(Gratis a partir de + 50€)</h6><br><h3>Total</h3></td>
+                        <td class="text-right"><h5><strong>8.00€<br>4.50€</strong></h5><br><br><h3>12.50€</h3></td>
                     </tr>
                     <tr>
                         <td>   </td>
                         <td>   </td>
                         <td>   </td>
                         <td>
-                        <button [routerLink]="['/products']" type="button" class="btn btn-default">
-                            <span class="glyphicon glyphicon-shopping-cart"></span> Continuar comprando
-                        </button></td>
+                          <div class="btn btn-success pull-left btn-fyi" [routerLink]="['/products']"><span class="glyphicon glyphicon-chevron-left"></span> CONTINUAR COMPRANDO</div>
+
+                        </td>
                         <td>
-                        <button type="button" class="btn btn-success">
-                            PAGAR <span class="glyphicon glyphicon-play"></span>
-                        </button></td>
+                          <div class="btn btn-success pull-right btn-fyi">PAGAR<span class="glyphicon glyphicon-chevron-right"></span>
+                          </div>
+
+                        </td>
                     </tr>
                 </tfoot>
             </table>

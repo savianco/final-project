@@ -1,6 +1,6 @@
 .navbar{
   background-color: #c64c4c;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .nav-link{
@@ -10,15 +10,45 @@
 
 .login-button, .logout-button, .search-button, .busca-prod{
   font-family: 'Germania One', cursive;
+  margin-left: 5px;
 }
 
-.img-cart{
+/*.img-cart{
+  border-radius: 5px;
   height: 50px;
-  width: 50px;
+  width: 90px;
   margin-right: -22px;
   margin-left: -25px;
   z-index: 0;
+}*/
 
+.img-cart{
+    background:url(http://www.jaimemesa.com/wp-content/uploads/2015/03/carrito.png) no-repeat;
+    cursor:pointer;
+    border:none;
+    border-radius: 5px;
+    margin-right: -22px;
+    margin-left: -25px;
+    width: 90px;
+    height: 50px;
+    z-index: 0;
+}
+
+.img-cart:active{
+    background:url(http://www.jaimemesa.com/wp-content/uploads/2015/03/carrito.png) no-repeat;
+}
+
+
+
+
+
+
+
+.num-buys{
+  color: white;
+  font-size: 40px;
+  margin-left: -30px;
+  margin-top: 10px;
 }
 
 .productsInTheCart{
