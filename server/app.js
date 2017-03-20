@@ -22,8 +22,6 @@ const users           = require('./routes/users');
 require('./configs/passport')(passport);
 const cors = require ('cors');
 
-//app.use('/users', users);
-
 
 // After that we need to configure mongoose:
 const mongoose = require("mongoose");
@@ -47,15 +45,18 @@ app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
+
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
 
 // Configure the Passport session...
 app.use(session({
@@ -65,19 +66,16 @@ app.use(session({
   cookie : { httpOnly: true, maxAge: 2419200000 }
 }));
 
+
 // Initialize auth modules:
 app.use(passport.initialize());
 app.use(passport.session());
 
 require('./routes')(app);
 
-// app.use('/', index);     COMENTADO AL HACER LA API /////////
 
 // Import the auth-controller:
 app.use('/', authController);
-//app.use('/users', users);
-
-// app.use('/products', products);    COMENTADO AL HACER LA API ////////
 
 
 // catch 404 and forward to error handler
@@ -90,7 +88,6 @@ app.use(function(req, res, next) {
 
 //  we know we’re going to use a client application, we want
 // to configure the client public index.html as a fallback page:
-
 app.all('/*', function (req, res) {
   res.sendfile(__dirname + '/public/index.html');
 });
@@ -98,9 +95,11 @@ app.all('/*', function (req, res) {
 
 // error handler
 app.use(function(err, req, res, next) {
+
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
+
 
   // render the error page
   res.status(err.status || 500);

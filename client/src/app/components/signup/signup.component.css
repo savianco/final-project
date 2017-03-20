@@ -1,10 +1,11 @@
+p{
+  font-size: 50px;
+}
+
 .form-control, .btn-log-sig{
   font-family: 'Germania One', cursive;
 }
 
-p{
-  font-size: 50px;
-}
 
 .intro-message2{
   font-size: 35px;

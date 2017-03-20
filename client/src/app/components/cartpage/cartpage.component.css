@@ -1,31 +1,36 @@
-.paymentWrap {
-	padding: 50px;
-}
-#carrito{
-	font-family: 'Germania One', cursive;
-}
-.icon-product{
-	margin-right: 10px;
-}
-.btn-default{
-	font-family: 'Germania One', cursive;
-}
-h5{
-	padding-top: 10px;
-}
 h4{
 	padding-top: 6px;
 }
 
+h5{
+	padding-top: 10px;
+}
+
+#carrito{
+	font-family: 'Germania One', cursive;
+}
+
+.icon-product{
+	margin-right: 10px;
+}
+
+.btn-default{
+	font-family: 'Germania One', cursive;
+}
+
+
+.paymentWrap {
+	padding: 50px;
+}
 
 .paymentWrap .paymentBtnGroup {
-	max-width: 800px;
 	margin: auto;
+	max-width: 800px;
 }
 
 .paymentWrap .paymentBtnGroup .paymentMethod {
-	padding: 40px;
 	box-shadow: none;
+	padding: 40px;
 	position: relative;
 }
 
@@ -35,20 +40,20 @@ h4{
 
 .paymentWrap .paymentBtnGroup .paymentMethod.active .method {
 	border-color: #4cd264;
-	outline: none !important;
 	box-shadow: 0px 3px 22px 0px #7b7b7b;
+	outline: none !important;
 }
 
 .paymentWrap .paymentBtnGroup .paymentMethod .method {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	border: 2px solid transparent;
+	bottom: 3px;
+	left: 3px;
 	position: absolute;
 	right: 3px;
 	top: 3px;
-	bottom: 3px;
-	left: 3px;
-	background-size: contain;
-	background-position: center;
-	background-repeat: no-repeat;
-	border: 2px solid transparent;
 	transition: all 0.5s;
 }
 

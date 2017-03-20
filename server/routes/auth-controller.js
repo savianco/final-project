@@ -80,21 +80,21 @@ authController.post("/logout", function(req, res) {
   res.status(200).json({ message: 'Hecho' });
 });
 
+
 // The Loggedin route is from the client...
 authController.get("/loggedin", function(req, res) {
   if(req.isAuthenticated()) {
     return res.status(200).json(req.user);
   }
-
   return res.status(403).json({ message: 'No autorizado' });
 });
+
 
 // The Private route looks a lot like the loggedin routes...
 authController.get("/private", (req, res) => {
   if(req.isAuthenticated()) {
     return res.json({ message: 'Este es un mensaje privado' });
   }
-
   return res.status(403).json({ message: 'No autorizado' });
 });
 

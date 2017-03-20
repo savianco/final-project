@@ -10,9 +10,6 @@ import { ContactComponent } from './components/contact/contact.component';
 import { CartpageComponent } from './components/cartpage/cartpage.component';
 
 
-
-
-
 const APP_ROUTES: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'signup', component: SignupComponent },

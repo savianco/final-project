@@ -22,21 +22,18 @@ body{
   width: 300px;
 }
 
-
 .search-button{
 }
 
 .login-button{
-  margin-left: 10px;
   background-color: green;
-}
-.signup-button{
   margin-left: 10px;
-  background-color: darkred;
 }
 
-
-
+.signup-button{
+  background-color: darkred;
+  margin-left: 10px;
+}
 
 /* ANIMACIONES */
 .animated {

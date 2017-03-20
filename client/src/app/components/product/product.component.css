@@ -16,21 +16,22 @@
 
 .pvp{
   float: right;
+  font-size: 40px;
   margin-left: 25px;
   margin-top: 5px;
-  font-size: 40px;
 }
 
 .img-logo-gd{
   width: 200px;
 }
+
 .img-logo-licores{
   width: 350px;
 }
 
 .img-logo-quesos{
-  width: 350px;
   padding-top: 35px;
+  width: 350px;
 }
 
 .img-logo-dulces{

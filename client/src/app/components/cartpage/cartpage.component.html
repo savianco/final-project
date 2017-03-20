@@ -18,18 +18,17 @@
                 <tbody>
                     <tr>
                         <td class="col-sm-8 col-md-6">
-                        <div class="media">
-
+                          <div class="media">
                             <div class="media-body" *ngFor="let product of products;">
                               <a class="thumbnail pull-left" href="#"> <img class="media-object"  src="{{ product.img }}"  style="width: 72px; height: 72px;"> </a>
-
                                 <h5 class="media-heading icon-product"><a [routerLink]="['/product']">{{  product.name }}  </a></h5>
                                 <h6 class="media-heading icon-product"><a [routerLink]="['/product']">  Ver detalle...</a></h6>
                                 <span>Tiempo de entrega: </span><span class="text-success"><strong> 24 horas </strong></span>
                             </div>
-                        </div></td>
+                          </div>
+                        </td>
                         <td class="col-sm-1 col-md-1" style="text-align: center">
-                        <input type="email" class="form-control" id="exampleInputEmail1" value="1">
+                          <input type="email" class="form-control" id="exampleInputEmail1" value="1">
                         </td>
                         <td class="col-sm-1 col-md-1 text-center"><h5>8.00€</h5></td>
                         <td class="col-sm-1 col-md-1 text-center"><h4>8.00€</h4></td>
@@ -38,7 +37,6 @@
                             <span class="glyphicon glyphicon-remove"></span> Borrar
                         </button></td>
                     </tr>
-
                 </tbody>
                 <tfoot>
                     <tr>
@@ -97,14 +95,12 @@
 				            		<div class="method ez-cash"></div>
 					                <input type="radio" name="options">
 					            </label>
-
 					        </div>
 						</div>
 						<div class="footerNavWrap clearfix">
-							<div class="btn btn-success pull-left btn-fyi" [routerLink]="['/products']"><span class="glyphicon glyphicon-chevron-left"></span> CONTINUAR COMPRANDO</div>
-							<div class="btn btn-success pull-right btn-fyi">PAGAR<span class="glyphicon glyphicon-chevron-right"></span></div>
+		  					<div class="btn btn-success pull-left btn-fyi" [routerLink]="['/products']"><span class="glyphicon glyphicon-chevron-left"></span> CONTINUAR COMPRANDO</div>
+			  				<div class="btn btn-success pull-right btn-fyi">PAGAR<span class="glyphicon glyphicon-chevron-right"></span></div>
 						</div>
-					</div>
-
-	</div>
+				</div>
+	  </div>
 </div>

@@ -22,16 +22,6 @@ exports.createProduct = function(req, res, next) {
 		return res.send(product);
 	});
 };
-		// Update the corresponding poduct
-// 		listModel.update(
-// 			{ _id: card.list },
-// 			{ $push: { cards: card._id } },
-// 			function() {
-// 				return res.send(card);
-// 			}
-// 		);
-// 	});
-// };
 
 
 exports.detailProduct = function(req, res, next){
@@ -54,7 +44,6 @@ exports.listProducts = function(req, res, next){
 
 exports.editProduct = function(req, res ,next) {
 	const productId = req.params.id;
-
 	productModel
 		.findByIdAndUpdate(productId, { $set: req.body }, function(err, product) {
 			if(err) {
@@ -88,6 +77,5 @@ exports.cartProducts = function (req, res, next){
 			}
 			console.log("received from db ", products);
 			res.json(products);
-
 		});
 };

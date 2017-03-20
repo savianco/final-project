@@ -223,27 +223,26 @@ input {
 }
 
 .bin-img {
-  margin: 5px;
   height: 16px;
-  width: 16px;
+  margin: 5px;
   padding: 5px 5px;
+  width: 16px;
 }
 
 .quantity {
-  margin: 0 5px;
   font-weight: lighter;
+  margin: 0 5px;
 }
 
 .add-new {
-  position: relative;
-  margin-left: 0px;
-  margin-bottom: 20px;
   background-color: #fff;
-  width: 75%;
-  margin: 0px 0px 0px 12%;
-  padding: 20px 0px;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
+  margin-bottom: 20px;
+  margin: 0px 0px 0px 12%;
+  padding: 20px 0px;
+  position: relative;
+  width: 75%;
 }
 
 .add-new input {

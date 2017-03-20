@@ -12,14 +12,12 @@ export class CartpageComponent implements OnInit {
   products: Array<Object> = [];
 
   constructor(public cart: CartListService,
-              private router: Router
-) {}
+              private router: Router) {}
 
   ngOnInit() {
   this.cart.getProductsForCart().subscribe((products) => {
       console.log('productos:', products);
       this.products = products;
     });
-
-}
+  }
 }

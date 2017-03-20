@@ -33,12 +33,8 @@ export class CartListService {
           console.log("got response from server");
           return res.json();
         })
-        // .map(product =>{this.emitter.emit(product);return product})
         .catch(this.handleError);
     }
-
-
-
 
     getCart(){
       return this.productAddEvent;

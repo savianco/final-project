@@ -22,12 +22,10 @@ import { AboutComponent } from './components/about/about.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ProductComponent } from './components/product/product.component';
 import { SearchComponent } from './components/search/search.component';
-import { CreateProductComponent } from './components/create-product/create-product.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { CartListComponent } from './components/cart-list/cart-list.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { CartpageComponent } from './components/cartpage/cartpage.component';
-// import { FileUploadModule } from 'ng2-file-upload@1.2.0';
 
 
 @NgModule({
@@ -40,7 +38,6 @@ import { CartpageComponent } from './components/cartpage/cartpage.component';
     ProductComponent,
     SearchComponent,
     SignupComponent,
-    CreateProductComponent,
     FooterComponent,
     CartListComponent,
     ContactComponent,
@@ -51,8 +48,7 @@ import { CartpageComponent } from './components/cartpage/cartpage.component';
     FormsModule,
     HttpModule,
     APP_ROUTING,
-    // FileUploadModule
-  ],
+],
   providers: [
     SessionService,
     ProductsService,

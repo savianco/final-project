@@ -3,21 +3,16 @@
 </div>
 
 <div class="card-columns">
-
   <div class="card animated fadeIn fast" *ngFor="let product of products;">
-   <img class="card-img-top img-fluid" [src]="product.img" [alt]="product.name">
-   <div class="card-block">
-     <h4 class="card-title">{{ product.name }}</h4>
-     <p class="card-text">{{ product.description }}</p>
-     <p class="card-text pvp">{{ product.price }} €</p>
-
-        <button (click)="seeProduct(product._id)"
-          type="button" class="btn btn-outline-primary btn-block ver-mas">
-          Ver más...
-       </button>
-
-    <!--   <a [routerLink] ="['/product',i]" class="btn btn-outline-primary">Ver más link...</a> -->
-   </div>
- </div>
-
+     <img class="card-img-top img-fluid" [src]="product.img" [alt]="product.name">
+         <div class="card-block">
+            <h4 class="card-title">{{ product.name }}</h4>
+            <p class="card-text">{{ product.description }}</p>
+            <p class="card-text pvp">{{ product.price }} €</p>
+            <button (click)="seeProduct(product._id)"
+                type="button" class="btn btn-outline-primary btn-block ver-mas">
+                Ver más...
+            </button>
+         </div>
+     </div>
 </div>

@@ -15,7 +15,6 @@ export class ProductsComponent implements OnInit {
     constructor(private productsService: ProductsService,
                 private router: Router
     ) {
-        //  console.log("constructor");
 }
 
     ngOnInit() {
@@ -25,7 +24,6 @@ export class ProductsComponent implements OnInit {
         }, (err) => {
             console.log("error in getProducts");
         });
-        //console.log(this.products);
     }
     seeProduct(id: string) {
         this.router.navigate(['/product', id]);

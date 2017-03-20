@@ -1,29 +1,24 @@
 <h1 class="animated fadeIn">{{ product.name | uppercase }} <small class="pvp"> {{ product.price }} €</small></h1>
-<hr>
+  <hr>
 
 <div class="row animated fadeIn fast">
-  <div class="col-md-4">
+    <div class="col-md-4">
+        <img [src]="product.img" class="img-fluid" [alt]="product.name">
+        <br> <br>
 
-    <img [src]="product.img" class="img-fluid" [alt]="product.name">
-    <br> <br>
-
-    <a [routerLink]="['/products']" class="btn btn-outline-danger btn-block">VOLVER</a>
-
-  </div>
-
-  <div class="col-md-8">
-    <h3>{{ product.name }}</h3>
-    <hr>
-    <p>
-      {{ product.description }}
-    </p>
-    <div>
-      <img class="img-logo-gd" src="http://www.grandespensa.com/assets/images/logo.png" alt="logo Gran Despensa">
-      <img *ngIf="product.category === 'QUESOS'" class="img-logo-quesos" src="http://www.cebreiro.es/img/logo.png" alt="logo D.O.Cebreiro">
-      <img *ngIf="product.category === 'LICORES'" class="img-logo-licores" src="http://www.grandespensa.com/assets/images/monje2.png" alt="logo D.O.Cebreiro">
-      <img *ngIf="product.category === 'DULCES'" class="img-logo-dulces" src="http://www.grandespensa.com/assets/images/monje1.png" alt="logo D.O.Cebreiro">
+        <a [routerLink]="['/products']" class="btn btn-outline-danger btn-block">VOLVER</a>
     </div>
-  <span>  <button (click)="addToCart(product._id)" type="button" class="btn btn-danger btn-inline btn-añadir-cesta">AÑADIR A LA CESTA</button>
-    <a [routerLink]="['/products']" class="btn btn-danger btn-inline btn-seguir-comprando">SEGUIR COMPRANDO</a>
-</span>
-  </div>
+    <div class="col-md-8">
+        <h3>{{ product.name }}</h3>
+        <hr>
+        <p>{{ product.description }}</p>
+            <div>
+                <img class="img-logo-gd" src="http://www.grandespensa.com/assets/images/logo.png" alt="logo Gran Despensa">
+                <img *ngIf="product.category === 'QUESOS'" class="img-logo-quesos" src="http://www.cebreiro.es/img/logo.png" alt="logo D.O.Cebreiro">
+                <img *ngIf="product.category === 'LICORES'" class="img-logo-licores" src="http://www.grandespensa.com/assets/images/monje2.png" alt="logo D.O.Cebreiro">
+                <img *ngIf="product.category === 'DULCES'" class="img-logo-dulces" src="http://www.grandespensa.com/assets/images/monje1.png" alt="logo D.O.Cebreiro">
+            </div>
+            <span><button (click)="addToCart(product._id)" type="button" class="btn btn-danger btn-inline btn-añadir-cesta">AÑADIR A LA CESTA</button>
+            <a [routerLink]="['/products']" class="btn btn-danger btn-inline btn-seguir-comprando">SEGUIR COMPRANDO</a></span>
+      </div>
+</div>

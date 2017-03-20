@@ -1,40 +1,38 @@
 <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <a class="navbar-brand" href="#">
-    <img src="http://www.grandespensa.com/assets/images/logo.png" width="70" height="70" alt="">
-  </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+        <a class="navbar-brand" href="#">
+            <img src="http://www.grandespensa.com/assets/images/logo.png" width="70" height="70" alt="">
+        </a>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <!-- active -->
-      <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['home']">INICIO</a>
-      </li>
-      <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['products']">PRODUCTOS ARTESANOS</a>
-      </li>
-      <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['about']">QUIENES SOMOS</a>
-      </li>
-      <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['contact']">CONTACTAR</a>
-      </li>
-    </ul>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            <!-- active -->
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" [routerLink]="['home']">INICIO</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" [routerLink]="['products']">PRODUCTOS ARTESANOS</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" [routerLink]="['about']">QUIENES SOMOS</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" [routerLink]="['contact']">CONTACTAR</a>
+                </li>
+            </ul>
 
-
-    <form class="form-inline my-2 my-lg-0 buttons">
-      <img [routerLink]="['cartpage']" src="http://www.jaimemesa.com/wp-content/uploads/2015/03/carrito.png" class="img-cart" type="button">
-      <h4 class="productsInTheCart" [routerLink]="['cartpage']"><app-cart-list class="num-buys"><br></app-cart-list></h4>
-      <input class="form-control mr-sm-2 busca-prod" type="text" placeholder="Buscar un producto" (keyup.enter)="searchProduct(searchText.value)" #searchText>
-      <button (click)="searchProduct(searchText.value)"
-       class="btn btn-outline-primary my-2 my-sm-0 search-button" type="botton">Buscar</button>
-         <button (click)="login()"
-          class="btn btn-outline-primary my-2 my-sm-0 login-button" type="botton">Login</button>
-         <button (click)="logout()"
-           class="btn btn-outline-primary my-2 my-sm-0 logout-button" type="botton">Logout</button>
-       </form>
-
-  </div>
+            <form class="form-inline my-2 my-lg-0 buttons">
+                <img [routerLink]="['cartpage']" src="http://www.jaimemesa.com/wp-content/uploads/2015/03/carrito.png" class="img-cart" type="button">
+                <h4 class="productsInTheCart" [routerLink]="['cartpage']"><app-cart-list class="num-buys"><br></app-cart-list></h4>
+                <input class="form-control mr-sm-2 busca-prod" type="text" placeholder="Buscar un producto" (keyup.enter)="searchProduct(searchText.value)" #searchText>
+                <button (click)="searchProduct(searchText.value)"
+                     class="btn btn-outline-primary my-2 my-sm-0 search-button" type="botton">Buscar</button>
+                <button (click)="login()"
+                     class="btn btn-outline-primary my-2 my-sm-0 login-button" type="botton">Login</button>
+                <button (click)="logout()"
+                     class="btn btn-outline-primary my-2 my-sm-0 logout-button" type="botton">Logout</button>
+             </form>
+      </div>
 </nav>

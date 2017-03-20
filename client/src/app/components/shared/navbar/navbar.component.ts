@@ -14,7 +14,6 @@ export class NavbarComponent implements OnInit {
   }
 
   searchProduct( word:string ){
-//    console.log(word);
     this.router.navigate( ['/search', word] )
   }
 
@@ -25,5 +24,4 @@ export class NavbarComponent implements OnInit {
     signup(){
       this.router.navigate( ['/signup'] )
     }
-
 }

@@ -28,5 +28,4 @@ export class ProductComponent {
   addToCart(productID){
     this.cartListService.addProduct(productID);
   }
-
 }
