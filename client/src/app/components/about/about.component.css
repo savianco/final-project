@@ -12,6 +12,9 @@
     border-top: 4px solid #fcab0e;
     margin: 0;
     padding: 20px 0;
+    left: 0;
+    right: 0;
+    position: absolute;
 }
 .footer_dv {
     width: 100%;
