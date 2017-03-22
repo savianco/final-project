@@ -1,4 +1,33 @@
 
 .carousel {
-  margin-top: 40px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.img-fluid{
+  width: 100%;
+}
+
+a.carousel-control-prev{
+  background-color: #c64c4c;
+  width: 4%;
+  height: 20%;
+  margin-top: 14%;
+  margin-left: -4%;
+}
+a.carousel-control-next{
+  background-color: #c64c4c;
+  width: 4%;
+  height: 20%;
+  margin-top: 14%;
+  margin-right: -4%;
+}
+
+.img-fluid{
+  height: 60vh;
+  width: 100vw;
+}
+
+#carouselExampleIndicators:hover{
+  background-color: red;
 }
